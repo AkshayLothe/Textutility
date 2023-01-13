@@ -1,0 +1,18 @@
+Django File Upload
+File upload to the server using Django is a very easy task. Django provides built-in library and methods that help to upload a file to the server.
+
+The forms.FileField() method is used to create a file input and submit the file to the server. While working with files, make sure the HTML form tag contains enctype="multipart/form-data" property.
+
+Let's see an example of uploading a file to the server. This example contains the following files.
+
+Template (index.html)
+
+It will create an HTML form which contains a file input component.
+
+<body>  
+<form method="POST" class="post-form" enctype="multipart/form-data">  
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <button type="submit" class="save btn btn-default">Save</button>  
+</form>  
+</body>  
